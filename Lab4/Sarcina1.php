@@ -3,7 +3,7 @@ include("conexiune.php");
 
 $sql = mysqli_query($conexiune,"SELECT * FROM `elevi`");
 
-echo "<h1></h1>";
+echo "<h1>Lista tuturor elevilor</h1>";
 
 echo "<table border = 1>";
 
