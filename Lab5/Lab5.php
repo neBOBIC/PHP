@@ -14,7 +14,7 @@
 
             $sql = mysqli_query($conexiune,"SELECT * FROM `elevi`");
 
-            echo "<a href='add.php'>Adauga elev<img src='img/add.png'></a>";
+            echo "<a href='add.php' class='add'>Adauga elev<img src='img/add.png'></a>";
 
             echo "<table border=1>";
 

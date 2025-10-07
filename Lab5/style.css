@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 button{
@@ -16,11 +17,26 @@ img{
 body{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     height: 100vh;
 }
 
-.tale{
-    width: 80%;
+.add{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+table{
+    border: 0px solid;
+}
+
+td, th{
+    border: 0px solid transparent;
+    padding: 5px;
+}
+
+th{
+    background-color: #1b293b;
+    color: white;
 }

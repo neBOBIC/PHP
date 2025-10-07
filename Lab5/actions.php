@@ -26,6 +26,7 @@ echo "<script>
 }
 
 else if ($action == "edit") {
+$id = $_POST["id"];
 $nume=$_POST["nume"];
 $prenume=$_POST["prenume"];
 $adresa=$_POST["adresa"];
@@ -34,7 +35,7 @@ $data_nasterii=$_POST["data_nasterii"];
 $sex=$_POST["sex"];
 $media_bac=$_POST["media_bac"];
 
-$query = "UPDATE elevi SET Nume='$nume', Prenume='$prenume', Adresa='$adresa', Email='$email', Data_Nasterii='$data_nasterii', SEX='$sex', Media_BAC='$media_bac'";
+$query = "UPDATE elevi SET Nume='$nume', Prenume='$prenume', Adresa='$adresa', Email='$email', Data_Nasterii='$data_nasterii', SEX='$sex', Media_BAC='$media_bac' WHERE ID = '$id'";
 
 if (!mysqli_query($conexiune, $query)) {
     die(mysqli_error($conexiune));
