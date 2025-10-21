@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livrare Pizza</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            background: #fdf2e9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        h1{
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #d94f4f;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 50px;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 40%;
+        }
+
+        .left, .right{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label{
+            font-weight: 600;
+            color: #333;
+            padding-bottom: 20px;
+        }
+
+        input[type="text"], select, textarea{
+            padding: 5px 10px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        input[type="text"]:focus,
+        select:focus,
+        textarea:focus{
+            border-color: #d94f4f;
+        }
+
+        textarea{
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        button{
+            padding: 12px 25px;
+            border: none;
+            background: #d94f4f;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #b63c3c;
+        }
+
+        #option{
+            margin-top: 10px;
+        }
+
+        .adaos{
+            margin-top: 10px;
+        }
+
+        .checkboxes{
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Livrare Pizza</h1>
+    <form action="Lab7.php" method="POST">
+        <div class="left">
+            <label for="nume">Numele Dvs.</label>
+            <label for="numar">Numarul Dvs.</label>
+            <label for="pizza">Alegeti Pizza</label>
+            <label for="sos">Sos pentru pizza</label>
+            <label for="sos_add">Adaos adaugator</label>
+            <label for="instr">Instructii pentru livrare</label>
+        </div>
+        <div class="right">
+            <input type="text" name="name" id="nume" required>
+            <input type="text" name="number" id="numar" required maxlength="9" minlength="9">
+            <div class="checkboxes">
+                <label for="pepperoni"><input type="checkbox" name="pizza[]" value="Pepperoni" id="pepperoni">Pepperoni</label>
+                <label for="vegetarian"><input type="checkbox" name="pizza[]" value="Vegetarian" id="vegetarian">Vegetarian</label>
+                <label for="rancho"><input type="checkbox" name="pizza[]" value="Rancho" id="rancho">Rancho</label>
+            </div>
+            <select name="option" id="option">
+                <option value="">Alege un sos</option>
+                <option value="Secret Sauce">Secret Sauce</option>
+                <option value="Spicy Sauce">Spicy Sauce</option>
+                <option value="Extra Sauce">Extra Sauce</option>
+            </select>
+            <div class="adaos">
+                <label for="cheese"><input type="checkbox" name="adaos[]" value="Extra Cheese" id="cheese">Extra Cheese</label>
+                <label for="gluten"><input type="checkbox" name="adaos[]" value="Extra Cheese" id="gluten">Gluten Free Base</label>
+            </div>
+            <textarea name="textarea" id="instr"></textarea>
+            <button type="submit">TRIMITE comanda</button>
+        </div>
+    </form>
+</body>
+</html>
